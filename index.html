@@ -1,204 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset */
-    body,
-    html {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuoi essere la mia Valentina?</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf2f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
 
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+        }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ol,
-    ul {
-      margin: 0 0 1rem 0;
-      padding: 0;
-    }
+        .gif-container img {
+            width: 100%;
+            max-width: 250px; 
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-    ol,
-    ul {
-      list-style-type: none;
-    }
+        h1 {
+            color: #be185d;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
 
-    img {
-      height: auto;
-    }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
 
-    h1 {
-      font-size: 4rem;
-    }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            font-weight: bold;
+            touch-action: manipulation; 
+        }
 
-    h2 {
-      font-size: 3rem;
-    }
+        .btn-yes {
+            background-color: #22c55e; /* Verde */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-    h3 {
-      font-size: 2rem;
-    }
-
-    h4 {
-      font-size: 1rem;
-    }
-
-    h5 {
-      font-size: 0.8rem;
-    }
-
-    h6 {
-      font-size: 0.6rem;
-    }
-
-    a {
-      text-decoration: none
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-
+        .btn-no {
+            background-color: #ef4444; /* Rosso */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
 
-  <header>
-    <div class="header">
-      <div class="logo">
-        <h1>LISTA 2</h1>
-      </div>
-    </div>
-  </header>
+    <div class="container">
+        <div class="gif-container" id="gifContainer">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZmZlZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute Bear">
+        </div>
 
-  <main>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Struttura scolastica</h2>
-          <p>
-            È evidente che la nostra struttura scolastica sia in declino: tetti pericolanti , una "palestra" all'aperto
-            nella quale
-            non si potrebbe neanche correre dato il suo stato, bagni con porte mancanti e senza sicure.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Settimana dello studente</h2>
-          <p>
-            La settimana dello studente è una settimana in cui si svolgono attività ricreative e didattiche dedicate a
-            noi ragazzi.
-            Settimana in cui i professori possono interrogare solo su richiesta dell’alunno per eventuale recupero ( in
-            presenza di
-            un compagno come testimone) e inoltre non possono essere introdotti nuovi argomenti.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Corsi Extracurricolari</h2>
-          <p>
-            A quanti è mai capitato di rimanere indietro durante l'anno? è per questo che proporremo ai vari
-            dipartimenti , di
-            organizzare dei corsi di recupero extrascolastici. E per chi è già bravo? in base alla disponibilità di
-            insegnanti o
-            studenti, si cercherà di realizzare corsi di potenziamento anche per formazione personale.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Viaggi d'istruzione</h2>
-          <p>
-            Faremo reintrodurre i viaggi d'istruzione per le quinte.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Gite scolastiche</h2>
-          <p>
-            Siamo stanchi delle solite gite al cinema, proporremo ai vostri insegnanti, se richiesto da voi, gite
-            scolastiche
-            inerenti al vostro indirizzo di studio (meccanica, elettrotecnica, informatica). Inoltre cercheremo di
-            organizzare gite
-            scolastiche di cultura generale con altri istituti.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Distributori</h2>
-          <p>
-            Succede spesso che durante la ricreazione la gente si ammassi ai banconi, si fanno file enormi e non è detto
-            che si
-            riesca a prendere anche solo una bottiglia d’acqua. Come rimedio per questo problema proporremo al preside
-            di aggiungere
-            dei distributori d’acqua, in modo tale che per chi volesse, può prendere una bottiglia d’acqua anche dopo
-            un’ora di
-            educazione fisica che spesso richiede un consumo di acqua moderato.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="obiettivo watch">
-      <div class="c">
-        <div class="obiettivo__content">
-          <h2> <i class="fa-sharp fa-solid fa-greater-than"></i> Comunicazione</h2>
-          <p>
-            La comunicazione fra studenti e rappresentanti è fondamentale, NOI ci saremo sempre PER VOI, per parlare di
-            problemi
-            della scuola e non solo: dei problemi inerenti alla vostra classe che i rappresentanti di classe non hanno
-            risolto, di
-            vostri problemi personali e se sarà il caso vi indirizzeremo verso lo sportello di ascolto.
-          </p>
-        </div>
-      </div>
-    </div>
-  </main>
+        <h1 id="question">Vuoi essere la mia Valentina?</h1>
 
-  <footer>
-    <div class="foot">
-      <h4>Made by Lista 2</h4>
-      <a href="https://www.instagram.com/itive3_lista2/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <div class="buttons">
+            <button class="btn-yes" id="yesBtn" onclick="acceptProposal()">Sì</button>
+            <button class="btn-no" id="noBtn" onclick="refuseProposal()">No</button>
+        </div>
     </div>
-  </footer>
 
+    <script>
+        let noClickCount = 0;
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const question = document.getElementById('question');
+        const gifContainer = document.getElementById('gifContainer');
 
+        // Frasi che cambiano ogni volta che si clicca "No"
+        const noTexts = [
+            "Sei sicuro?",
+            "Davvero sicura?",
+            "Pensaci bene...",
+            "Per favore!",
+            "Non farmi questo!",
+            "Sto per piangere...",
+            "Mi spezzi il cuore ;(",
+            "Ok, ora basta...",
+            "Clicca SÌ per favore!",
+            "Non hai altra scelta!"
+        ];
 
-  <script src="main.js"></script>
+        function refuseProposal() {
+            noClickCount++;
+            
+            // Cambia il testo del pulsante No
+            if (noClickCount <= noTexts.length) {
+                noBtn.innerText = noTexts[noClickCount - 1];
+            } else {
+                noBtn.innerText = "DAI!!!";
+            }
 
+            // Aumenta la dimensione del pulsante Sì
+            const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+            const currentPadding = parseFloat(window.getComputedStyle(yesBtn).padding);
+            
+            // Logica di crescita esponenziale
+            yesBtn.style.fontSize = `${currentSize * 1.4}px`;
+            yesBtn.style.padding = `${currentPadding * 1.1}px`; // Aumenta anche il padding leggermente
+        }
+
+        function acceptProposal() {
+            // Nascondi i pulsanti e cambia la schermata
+            document.querySelector('.buttons').style.display = 'none';
+            question.innerText = "Siiiii! ❤️ Ci vediamo il 14!";
+            
+            // Cambia la GIF in una felice
+            gifContainer.innerHTML = '<img src="https://media.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Happy Bear">';
+            
+            // Aggiungi un po' di confetti (effetto festa semplice)
+            document.body.style.backgroundColor = "#ffe4e6";
+        }
+    </script>
 </body>
-
 </html>
